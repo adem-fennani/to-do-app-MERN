@@ -2,6 +2,12 @@
 
 A simple To-Do application built with the MERN stack (MongoDB, Express.js, React, Node.js) for learning purposes. This project allows users to add and delete tasks, with data stored in a local MongoDB database.
 
+## Tech Stack
+- **Frontend**: React 18 with Vite (fast build tool and dev server)
+- **Backend**: Express.js with Node.js
+- **Database**: MongoDB (local)
+- **Development**: Hot Module Replacement (HMR) for instant updates
+
 ## Project Structure
 ```
 todo-app-mern/
@@ -9,15 +15,12 @@ todo-app-mern/
 │   ├── server.js
 │   ├── .env
 │   └── package.json
-├── frontend/         # React frontend
-│   ├── public/
-│   │   └── index.html
-│   ├── src/
-│   │   ├── App.js
-│   │   ├── App.css
-│   │   ├── index.js
-│   │   ├── index.css
-│   │   └── reportWebVitals.js
+├── frontend/         # React frontend with Vite
+│   ├── App.jsx       # Main App component
+│   ├── App.css       # App styles
+│   ├── main.jsx      # Entry point
+│   ├── index.html    # HTML template
+│   ├── vite.config.js # Vite configuration
 │   └── package.json
 ├── .gitignore
 └── README.md         # This file
@@ -58,10 +61,11 @@ todo-app-mern/
    ```bash
    npm install
    ```
-3. Start the React app:
+3. Start the React development server (Vite):
    ```bash
-   npm start
+   npm run dev
    ```
+   The app will open at `http://localhost:5173` (Vite's default port)
 
 ### MongoDB
 - Ensure MongoDB is running locally:
@@ -83,9 +87,9 @@ todo-app-mern/
 3. Start the frontend in another terminal:
    ```bash
    cd frontend
-   npm start
+   npm run dev
    ```
-4. Open `http://localhost:3000` in your browser to use the app.
+4. Open `http://localhost:5173` in your browser to use the app.
 
 ## Features
 - Add a new task.
@@ -97,7 +101,13 @@ todo-app-mern/
 - Set up a local MongoDB database.
 - Build a RESTful API with Express.js.
 - Create a React frontend with state management.
+- Use modern build tools (Vite) for faster development.
 - Use Git for version control.
+
+## Development Notes
+- The frontend was migrated from Create React App to Vite for improved performance and faster development experience.
+- Vite provides instant Hot Module Replacement (HMR) and lightning-fast builds.
+- Dependencies are managed via `package.json` and should not be committed to version control.
 
 ## License
 MIT License
